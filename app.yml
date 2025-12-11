@@ -68,7 +68,6 @@ jobs:
     - name: Verify app content
       run: |
         RESPONSE=$(curl -s http://localhost:8080/bus_booking_-app/)
-        echo "$RESPONSE" | grep "Welcome to Economic Times App" || true
-        echo "$RESPONSE" | grep "Live News Categories" || true
-        echo "$RESPONSE" | grep "Top Headlines" || true
+        echo "$RESPONSE" | grep "Welcome to Bus Booking app App" || true
+        
         tomcat10/bin/shutdown.sh
