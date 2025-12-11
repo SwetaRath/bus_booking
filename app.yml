@@ -6,7 +6,7 @@ on:
 
 jobs:
   prerequisites:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - name: Checkout code
@@ -19,7 +19,7 @@ jobs:
         cache: 'maven'
   
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: prerequisites
     steps: bus_booking
     - name: Checkout code
