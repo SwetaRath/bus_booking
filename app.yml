@@ -63,7 +63,7 @@ jobs:
         
     - name: Status check
       run: |
-        curl -I http://localhost:8080/bus_booking_app/ || true
+        curl -I http://13.201.34.90:8080/bus_booking_app/ || true
         
     - name: Verify app content
       run: |
