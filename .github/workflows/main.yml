@@ -6,28 +6,28 @@ on:
       - '**'
   pull_request:
     branches:
-      - master
+      - main
   workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-host
 
     steps:
       # Checkout the repository
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Set up Java
       - name: Set up Java
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@4
         with:
-          java-version: '11'
+          java-version: '17'
           distribution: 'temurin'
 
       # Cache Maven dependencies
       - name: Cache Maven dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.m2
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
