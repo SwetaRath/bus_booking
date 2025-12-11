@@ -67,7 +67,7 @@ jobs:
         
     - name: Verify app content
       run: |
-        RESPONSE=$(curl -s http://localhost:8080/bus_booking_-app/)
+        RESPONSE=$(curl -s http://localhost:8080/bus_booking_app/)
         echo "$RESPONSE" | grep "Welcome to Bus Booking app App" || true
         
         tomcat10/bin/shutdown.sh
