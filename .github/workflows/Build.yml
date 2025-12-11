@@ -6,7 +6,7 @@ on:
       - '**'
   pull_request:
     branches:
-      - main
+      - feature-1
   workflow_dispatch:
 
 jobs:
@@ -84,3 +84,4 @@ jobs:
         run: |
           echo "Stopping the app gracefully..."
           mvn spring-boot:stop
+SZ
